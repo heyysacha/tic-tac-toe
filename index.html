@@ -7,14 +7,32 @@
     <title>Tic Tac Toe</title>
 
     <link rel="stylesheet" href="style.css">
-    <script src="app.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
 
 </head>
 
 <body>
     <h1>Tic Tac Toe</h1>
 
+    <dialog id="p1-dialog">
+        <p id="dialog-p1-p"></p>
+        <form method="dialog">
+            <button id="p1-dialog-btn">OK</button>
+        </form>
+    </dialog>
+
+    <dialog id="p2-dialog">
+        <p id="dialog-p2-p"></p>
+        <form method="dialog">
+            <button id="p2-dialog-btn">OK</button>
+        </form>
+    </dialog>
+
     <div id="gameboard">
+        <div class="square" id="square0"></div>
         <div class="square" id="square1"></div>
         <div class="square" id="square2"></div>
         <div class="square" id="square3"></div>
@@ -23,8 +41,28 @@
         <div class="square" id="square6"></div>
         <div class="square" id="square7"></div>
         <div class="square" id="square8"></div>
-        <div class="square" id="square9"></div>
     </div>
+    <div id="scoreboard">
+        <div id="player-info">
+            <div id="player-1">
+                <label for="p1" id="p1-label">Player 1:</label>
+                <input type="text" name="p1" id="p1" placeholder="Sacha" value="Sacha">
+                <button class="name" id="p1-btn">Submit Name</button>
+            </div>
+
+            <div id="player-2">
+                <label for="p2" id="p2-label">Player 2:</label>
+                <input type="text" name="p2" id="p2" placeholder="Jake" value="Jake">
+                <button class="name" id="p2-btn">Submit Name</button>
+            </div>
+        </div>
+        <div id="information">
+            <button id="new-game-btn" class="hidden">Reset Game</button>
+        </div>
+    </div>
+
+
+    <script src="app.js"></script>
 </body>
 
 </html>
